@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: "Joshua Lund"
+  description: "Ansible role that installs rTorrent (http://libtorrent.rakshasa.no), Screen, and a dedicated 'rtorrent' user."
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+  categories:
+    - networking
+dependencies: []

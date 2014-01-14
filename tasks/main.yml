@@ -1,0 +1,17 @@
+---
+- name: Install rTorrent
+  apt: pkg=rtorrent
+
+- name: Install Screen
+  apt: pkg=screen
+
+- name: Add the rTorrent user
+  user: name=rtorrent
+        home=/home/rtorrent
+        shell=/bin/bash
+        comment="rTorrent User"
+
+- name: Set up authorized_keys for the rTorrent user
+  authorized_key: user=rtorrent
+                  state=present
+                  key="{{ rtorrent_authorized_key }}"
